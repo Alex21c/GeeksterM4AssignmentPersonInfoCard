@@ -1,5 +1,6 @@
-# Assignmnent, Person Info. Card (Geekster MERN Stack Module 4)
-Local Storage is a part of HTML5 Web Storage API.
+# Assignment, Person Info. Card (Geekster MERN Stack Module 4)
+Completed Geekster Assignment Personal Info. Card, using local storage which is a part of HTML5 Web Storage API.
+Concept is simple, a form is given to capture info. from user, and when form is submitted, all the data is stored into local client storate using HTML5 web storage API.
 
 
 ![](thumbnail.png)
