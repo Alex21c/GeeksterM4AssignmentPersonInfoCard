@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Person Info. Card Assignment, Geekster MERN Stack Module 4">
+  <meta name="keywords" content="Geekster, Module 4, DOM, Javascript">
+  <meta name="author" content="Abhishek kumar">        
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <title>Person Info. Card</title>  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontAwesomeProIcons/fontAwesomeIcons.css">    
+  <link rel="stylesheet" href="tailwind.css">  
+  
+
+</head>
+<body class="nightMode relative bg-slate-500  flex flex-col items-center gap-2 mb-10">
+  <header class="wrapperForm sticky top-0 bg-slate-700 w-full z-40 pt-3 pb-5">
+    <h1 id='topHeading' class="text-center  text-zinc-50"><span class="assignmentTitle font-semibold text-5xl" style="font-variant: small-caps;">Person Info. Card Assignment</span> <a href="https://www.geekster.in/full-stack-web-development-program" class="geeksterPromo text-2xl">(<span class="underline">Geekster MERN Stack Module #4</span>)</a></h1>
+
+  </header>
+
+  <div id='masterWrapper' class="w-[35rem] m-1  p-[1rem] rounded-md bg-slate-700">
+    <div class="wrapperH2AndNightModeBtn  relative bg-gradient-to-br from-green-700 to-green-500 ring ring-green-700 flex h-[4rem] p-2 justify-between rounded-t-sm">
+      <div class="flex gap-[1rem] ">
+        <h2 class="text-zinc-100 text center text-3xl ">Person Info.</h2>
+        <img id='imgAnimationSavingData' src="Assests/fileSave2.gif" alt="document save animation" class="displayNone rounded-full ">
+      </div>
+      <div id="wrapperMoonAndSun" class="relative ">
+        <i class="circleMask circleCoverMoon"></i>
+        <i class="faIcon  fa-solid fa-moon-stars"></i>
+        <i class="faIcon fa-sharp fa-solid fa-sun"></i>
+      </div>
+    </div>
+    <form action="#"  id='formPersonInfoInput' class="flex flex-col gap-[.3rem] displayNone">
+      <input class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" type="text" placeholder="First Name" name="firstName" required="">
+      <input class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" type="text" placeholder="Last Name" name="lastName" required="">
+      <select class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" name="personCountry" id="personCountry"></select>
+      <input class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" type="text" placeholder="Phone Number" name="phoneNumber" required="">
+      <input class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" type="text" placeholder="State" name="state" required="">
+      <input class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" type="text" placeholder="City" name="city" required="">
+      <input class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" type="text" placeholder="Village" name="village" required="">
+
+      <input type="submit" value="Save Person Info." class="transition-all  text-zinc-50 bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-900 focus:outline-none focus:ring focus:ring-emerald-500  rounded-md cursor-pointer p-1 h-14 font-semibold text-2xl">
+    </form>
+
+    <table id="tableOutput" class="m-[1rem]">
+
+    </table>
+  </div>
+
+  
+
+
+
+  <script src="dbCountries.js"> </script>
+  <script src="View.js"> </script>
+  <script src="Model.js"> </script>
+  <script src="Controller.js"> </script>
+  <script src="index.js"> </script>
+
+</body>
+</html>

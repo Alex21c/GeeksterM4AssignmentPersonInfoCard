@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+Command for Tailwind build || live cache refresh
+npx tailwindcss -i index.css -o tailwind.css --watch 
+*/
+
+:root {
+  --color-white: #FFFFFF;
+}
+
+*, ::before, ::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.displayNone {
+  display: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+h1{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+/* Day/Night Mode specific */
+
+.faIcon{
+  font-size: 1.5rem;
+}
+
+div#wrapperMoonAndSun{
+  background-color: #020233;
+  width: 7rem;
+  padding: .5rem 1rem;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  /* height: 5rem;  */
+  border-radius: 10rem;
+  /* margin:1rem; */
+  position: relative;
+}
+
+.fa-moon-stars{
+  color:white;
+}
+
+.fa-sun{
+  color:#FDB813;
+}
+
+.circleMask{
+  background-color: white;
+  width: 2.1rem;
+  height: 2.1rem;
+  position: absolute;
+  border-radius: 5rem;
+  top: 0.5rem;
+  transition: .5s;
+  left: 0.8rem;
+}
+
+.circleCoverSun{
+  left: 4.1rem;
+}
+
+.circleCoverMoon{
+  left: 0.5rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 838px){
+  form#formForAutoSaveData{
+    width:40rem;    
+  }
+}
+@media screen and (max-width: 672px){
+  form#formForAutoSaveData{
+    width:30rem;    
+    height: 60vh;
+  }
+  h1 span.assignmentTitle {
+    font-size: 2.3rem;
+  }
+
+  h1 a.geeksterPromo{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 502px){
+  form#formForAutoSaveData{
+    width:25rem;    
+  }
+  h1 span.assignmentTitle {
+    font-size: 2rem;
+  }
+
+  h1 a.geeksterPromo{
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 428px){
+  form#formForAutoSaveData{
+    width:20rem;    
+  }
+  div.wrapperH2AndNightModeBtn{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 1rem;
+    align-items: center;
+  }
+
+
+}
+
+@media screen and (max-width: 346px){
+  form#formForAutoSaveData{
+    width:18rem;    
+  }
+}
