@@ -911,24 +911,19 @@ div#wrapperMoonAndSun{
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 838px){
-  form#formForAutoSaveData{
-    width:40rem;
-  }
-}
-
 @media screen and (max-width: 672px){
-  form#formForAutoSaveData{
-    width:30rem;
-    height: 60vh;
-  }
-
   h1 span.assignmentTitle {
     font-size: 2.3rem;
   }
 
   h1 a.geeksterPromo{
     font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 598px){
+  div#masterWrapper{
+    width: 30rem;
   }
 }
 
@@ -946,9 +941,15 @@ div#wrapperMoonAndSun{
   }
 }
 
-@media screen and (max-width: 428px){
-  form#formForAutoSaveData{
-    width:20rem;
+@media screen and (max-width: 598px){
+  div#masterWrapper{
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 438px){
+  div#masterWrapper{
+    width: 21rem;
   }
 
   div.wrapperH2AndNightModeBtn{
@@ -962,6 +963,10 @@ div#wrapperMoonAndSun{
 }
 
 @media screen and (max-width: 346px){
+  div#masterWrapper{
+    width: 18rem;
+  }
+
   form#formForAutoSaveData{
     width:18rem;
   }
