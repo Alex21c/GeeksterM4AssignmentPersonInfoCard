@@ -7,15 +7,8 @@ class Controller{
     this.formPersonInfoInput = document.querySelector('form#formPersonInfoInput');
     
     this.textAreaAutoSave = document.querySelector('textarea#textAreaAutoSave');
-    this.debouncedInput = this.debounce(function(){
-      this.view.showOrHideAnimaitonImageSavingData();
-      this.model.saveData(this.textAreaAutoSave.value);
-      setTimeout(()=>{
-        this.view.showOrHideAnimaitonImageSavingData();
-      },1000);
-    }, 500)
 
-    // this.textAreaAutoSave.addEventListener('input', this.debouncedInput);
+
     // adding event listeners
     this.formPersonInfoInput.addEventListener('submit', (event)=>{
       event.preventDefault();
@@ -28,7 +21,15 @@ class Controller{
         city: event.target['city'].value,
         village: event.target['village'].value,
       };
-      this.model.saveData(JSON.stringify(personData));        
+      this.view.showOrHideAnimaitonImageSavingData();
+      
+      
+      this.model.saveData(JSON.stringify(personData));    
+      setTimeout(()=>{
+        this.view.showOrHideAnimaitonImageSavingData();
+        this.view.updateOutputTable();
+      },3000);
+      this.formPersonInfoInput.classList.add('displayNone');    
     });
 
   }

@@ -3,23 +3,23 @@ class View{
 
   constructor(model, dbCountries){
     this.dbCountries = dbCountries;
-    this.masterWrapper={
-      nightMode: "bg-slate-400",      
-      dayMode: "bg-slate-700"
+    this.stylesForMasterWrapper={
+      dayMode: "bg-slate-200",
+      nightMode: "bg-slate-700"     
     };
 
     this.styles={
       table:{
         td:{
           heading:{            
-            'default': 'font-medium text-[1.3rem] text-right text-stone-700',
-            'lightMode': 'text-zinc-50',
-            'darkMode': 'text-stone-700'
+            'default': 'font-medium text-[1.3rem] text-right text-zinc-50',
+            'darkMode': 'text-zinc-50',
+            'lightMode': 'text-stone-700'
           },
           value:{
-            'default': 'font-normal text-[1.2rem] text-left text-slate-700',
-            'lightMode': 'text-zinc-50',
-            'darkMode': 'text-slate-700'
+            'default': 'font-normal text-[1.2rem] text-left text-zinc-50',
+            'darkMode': 'text-zinc-50',
+            'lightMode': 'text-stone-700'
           }
 
         },
@@ -35,10 +35,14 @@ class View{
       this.circleMask = document.querySelector('.circleMask');
       this.body = document.querySelector('body');
       // this.textAreaAutoSave = document.querySelector('textarea#textAreaAutoSave');
-      this.imgAnimationSavingData = document.querySelector('img#imgAnimationSavingData');
+      this.wrapperImgAnimationSavingData = document.querySelector('div#wrapperImgAnimationSavingData');
       this.personCountry = document.querySelector('select#personCountry');
       this.tableOutput = document.querySelector('table#tableOutput');
       this.masterWrapper = document.querySelector('div#masterWrapper');
+      this.formPersonInfoInput = document.querySelector('form#formPersonInfoInput');
+      if(this.model.isThereUserDataAlreadyPresent){
+        this.formPersonInfoInput.classList.add('displayNone');
+      }
       
     // updating 
       // this.textAreaAutoSave.value = this.model.fetchData();
@@ -122,6 +126,14 @@ class View{
 
   updateDarkLightModeForTableShowingPersonInfo(){
     let isItNightMode = this.body.classList.contains('nightMode');
+    if(isItNightMode){
+      // swtich to day mode
+      this.masterWrapper.className= this.masterWrapper.className.replaceAll(this.stylesForMasterWrapper.nightMode, this.stylesForMasterWrapper.dayMode);
+    }else{
+      // swtich to night mode
+      this.masterWrapper.className= this.masterWrapper.className.replaceAll(this.stylesForMasterWrapper.dayMode, this.stylesForMasterWrapper.nightMode);
+
+    }
     this.tableOutput.querySelectorAll('tr').forEach((tr)=>{
       tr.querySelectorAll('td').forEach((td)=>{        
         if(td.getAttribute('data') === 'heading'){
@@ -149,7 +161,7 @@ class View{
   }
 
   showOrHideAnimaitonImageSavingData(){
-    this.imgAnimationSavingData.classList.toggle('displayNone');
+    this.wrapperImgAnimationSavingData.classList.toggle('displayNone');
   }
 
   getCountryFlagImage(countryName){

@@ -27,7 +27,7 @@
     <div class="wrapperH2AndNightModeBtn  relative bg-gradient-to-br from-green-700 to-green-500 ring ring-green-700 flex h-[4rem] p-2 justify-between rounded-t-sm">
       <div class="flex gap-[1rem] ">
         <h2 class="text-zinc-100 text center text-3xl ">Person Info.</h2>
-        <img id='imgAnimationSavingData' src="Assests/fileSave2.gif" alt="document save animation" class="displayNone rounded-full ">
+        
       </div>
       <div id="wrapperMoonAndSun" class="relative ">
         <i class="circleMask circleCoverMoon"></i>
@@ -35,7 +35,10 @@
         <i class="faIcon fa-sharp fa-solid fa-sun"></i>
       </div>
     </div>
-    <form action="#"  id='formPersonInfoInput' class="flex flex-col gap-[.3rem] displayNone">
+    <div id='wrapperImgAnimationSavingData' class="w-[100%] h-[100%rem] p-[1rem] flex items-center justify-center displayNone">
+      <img  src="Assests/fileSave2.gif" alt="document save animation" class="rounded-full w-[15rem] h-[15rem]">
+    </div>
+    <form action="#"  id='formPersonInfoInput' class="flex flex-col gap-[.3rem]">
       <input class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" type="text" placeholder="First Name" name="firstName" required="">
       <input class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" type="text" placeholder="Last Name" name="lastName" required="">
       <select class="bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700 text-xl" name="personCountry" id="personCountry"></select>
